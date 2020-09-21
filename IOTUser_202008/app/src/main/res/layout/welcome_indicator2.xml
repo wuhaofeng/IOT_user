@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/guide2"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_ind2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--style="@style/jump_guide_txt"-->
+    <!--android:text="@string/guide_act_jump"-->
+    <!--/>-->
+
+</RelativeLayout>

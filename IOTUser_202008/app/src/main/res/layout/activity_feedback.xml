@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="activity"
+        type="com.iot.user.ui.activity.mine.FeedbackActivity" />
+</data>
+<LinearLayout  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/toolbar"/>
+
+    <ImageView
+        android:id="@+id/feedback_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        android:layout_below="@id/toolbar"/>
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dp"
+        android:gravity="top"
+        android:hint="请输入您的反馈意见（字数200以内）"
+        android:textColorHint="#c7c7c7"
+        android:background="@drawable/item_bg"
+        android:inputType="textMultiLine"
+        android:maxEms="10"
+        android:minEms="10"
+        android:maxLength="200"
+        android:textSize="14sp">
+        <requestFocus />
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/feetback_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_feedback"
+        android:layout_margin="10dp"
+        android:text="您还可以输入200字"
+        android:textColor="#919191"
+        android:textSize="12sp"  />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="给我们评分:"/>
+        <com.cb.ratingbar.CBRatingBar
+            android:id="@+id/rating_bar"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/feedback_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="提交"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
+</layout>

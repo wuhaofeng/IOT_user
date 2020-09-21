@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popwindow_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/translate_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/translate">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white">
+            <LinearLayout
+                android:id="@+id/dialog_linear"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/header_iv_weather"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="-20dp"
+                    android:src="@drawable/shopping_delete" />
+
+                <Button
+                    android:id="@+id/btn_popwindow_delete"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@color/transparent"
+                    android:text="清空"
+                    android:textColor="@color/black_66"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/dialog_linear"
+                android:background="@color/backgroundGray"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popwindow_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_linear"
+                android:layout_marginTop="1dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/activity_bottom_layout"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shopping_select"/>
+            <TextView
+                android:id="@+id/tv_popwindow_bottom_num"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:gravity="center|clip_vertical"
+                android:background="@drawable/bg_rect_red_btn"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="合计:"
+                    android:textSize="18dp"
+                    android:textColor="@color/bar_grey_90"
+                    android:gravity="center|clip_vertical" />
+                <TextView
+                    android:id="@+id/tv_popwindow_bottom_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="0.00"
+                    android:textSize="20dp"
+                    android:textColor="@color/google_red"
+                    android:gravity="center|clip_vertical" />
+                <Button
+                    android:id="@+id/btn_popwindow_bottom_submit"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:text="结 算"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:background="@color/google_red"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

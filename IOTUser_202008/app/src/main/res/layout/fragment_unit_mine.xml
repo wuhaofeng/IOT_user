@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.iot.user.ui.fragment.mine.UnitMineFragment" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearL_mine_bg"
+    android:background="@drawable/unit_bg_home"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/self_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp">
+        <Button
+            android:id="@+id/btn_right_qrcode"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="right"
+            android:background="@drawable/unit_qrcode" />
+        <ImageView
+            android:id="@+id/iv_my_header"
+            android:layout_width="65dip"
+            android:layout_height="65dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_man"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_right_qrcode"
+            android:layout_toRightOf="@+id/iv_my_header"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_my_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_my_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/textColor" />
+                <TextView
+                    android:id="@+id/tv_my_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="(测试平台)"
+                    android:textColor="@color/red"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_my_family_dev_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_rect_btn_white_empty_white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_dev_buy"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/transparent"
+            android:visibility="visible"
+            app:setting_image="@drawable/setting_contact"
+            app:setting_red_dot="false"
+            app:setting_title="设备续费"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_order_manager"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_repair"
+            app:setting_red_dot="false"
+            app:setting_title="订单管理"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_alert_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_red_dot="false"
+            android:visibility="visible"
+            app:setting_image="@drawable/setting_alert"
+            app:setting_title="报警设置"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_repair_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_server"
+            app:setting_red_dot="false"
+            app:setting_title="设备报修"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_server"
+            android:visibility="gone"
+            app:setting_red_dot="false"
+            app:setting_title="意见反馈"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_dev_support"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_qa"
+            app:setting_red_dot="false"
+            app:setting_title="常见问题"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_red_dot="false"
+            app:setting_image="@drawable/setting_qa"
+            app:setting_title="联系我们"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_app_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_red_dot="true"
+            android:visibility="gone"
+            app:setting_image="@drawable/setting_upt"
+            app:setting_title="版本更新"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_app_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_red_dot="false"
+            app:setting_image="@drawable/setting_upt"
+            app:setting_title="设置"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

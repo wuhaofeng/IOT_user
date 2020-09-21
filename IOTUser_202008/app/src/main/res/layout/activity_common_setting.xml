@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.iot.user.ui.activity.mine.CommonSettingActivity" />
+    </data>
+<LinearLayout    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_server"
+            android:visibility="visible"
+            app:setting_red_dot="false"
+            app:setting_title="意见反馈"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_dev_support"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_image="@drawable/setting_qa"
+            app:setting_red_dot="false"
+            app:setting_title="常见问题"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+        <com.iot.user.ui.view.mine.MySettingItemView
+            android:id="@+id/item_app_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?item_setting_bg"
+            app:setting_red_dot="true"
+            app:setting_image="@drawable/setting_upt"
+            app:setting_title="版本更新"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="?lineColor"/>
+    </LinearLayout>
+</LinearLayout>
+</layout>

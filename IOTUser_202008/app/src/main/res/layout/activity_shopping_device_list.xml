@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.iot.user.ui.activity.shopping.ShoppingDeviceListActivity" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/activity_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+                <include layout="@layout/toolbar"
+                    android:id="@+id/toolbar"/>
+
+                <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+                    android:id="@+id/swipeToLoadLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ll_payinfo"
+                    android:layout_below="@+id/toolbar"
+                    app:swipe_style="classic">
+                    <include
+                        android:id="@id/swipe_refresh_header"
+                        layout="@layout/layout_refresh_header_normal" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/swipe_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundGray"
+                        android:scrollbars="vertical" />
+                    <include
+                        android:id="@id/swipe_load_more_footer"
+                        layout="@layout/layout_refresh_footer_normal" />
+                </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/activity_bottom_layout"
+                android:layout_alignParentBottom="true">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shopping_select"/>
+                <TextView
+                    android:id="@+id/tv_bottom_num"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center|clip_vertical"
+                    android:background="@drawable/bg_rect_red_btn"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="合计:"
+                        android:textSize="18dp"
+                        android:textColor="@color/bar_grey_90"
+                        android:gravity="center|clip_vertical" />
+                    <TextView
+                        android:id="@+id/tv_bottom_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="0.00"
+                        android:textSize="20dp"
+                        android:textColor="@color/google_red"
+                        android:gravity="center|clip_vertical" />
+                    <Button
+                        android:id="@+id/btn_bottom_submit"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:text="结 算"
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        android:background="@color/google_red"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

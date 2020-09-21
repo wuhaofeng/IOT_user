@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.iot.user.ui.activity.message.UnitMessageDetailActivity" />
+    </data>
+<RelativeLayout
+    android:id="@+id/ll_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/backgroundColor"
+        android:gravity="center_horizontal">
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/ll_dev_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/detail_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="内容"
+                android:textColor="#919191"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/detail_location"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="位置:"
+                android:textColor="#919191"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tv_devnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/detail_device"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"
+                android:text="编号:"
+                android:textColor="#919191"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/detail_time"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"
+                android:text="时间:"
+                android:textColor="#919191"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.2px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lineColor"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#919191"
+            android:textSize="14sp"
+            android:text="设备参数信息："/>
+        <ListView
+            android:id="@+id/lv_reatine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>

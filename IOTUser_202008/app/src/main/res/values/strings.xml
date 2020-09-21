@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">明厦智慧燃气</string>
+    <string name="about">联系我们</string>
+    <string name="mm_no_net">请检查网络设置</string>
+
+    <string name="download_url">http://fir.im/gankmm</string>
+    <string name="github_my">https://github.com/maning0303</string>
+    <string name="gankio">http://www.gank.io</string>
+    <string name="github">github</string>
+    <string name="github_01">https://github.com/yqritc/RecyclerView-FlexibleDivider</string>
+    <string name="github_02">https://github.com/google/gson</string>
+    <string name="github_03">https://github.com/square/okhttp</string>
+    <string name="github_04">https://github.com/square/retrofit</string>
+    <string name="github_05">https://github.com/bumptech/glide</string>
+    <string name="github_06">https://github.com/ZhaoKaiQiang/KLog</string>
+    <string name="github_07">https://github.com/saiwu-bigkoo/Android-SVProgressHUD</string>
+    <string name="github_08">https://github.com/JakeWharton/butterknife</string>
+    <string name="github_09">https://github.com/Aspsine/SwipeToLoadLayout</string>
+    <string name="github_10">https://github.com/ldoublem/ThumbUp</string>
+    <string name="github_11">https://github.com/afollestad/material-dialogs</string>
+    <string name="github_12">https://github.com/jhy/jsoup</string>
+    <string name="github_13">https://github.com/yanzhenjie/AndPermission</string>
+    <string name="github_14">https://github.com/ogaclejapan/SmartTabLayout</string>
+    <string name="github_15">https://github.com/maning0303/SwitcherView</string>
+    <string name="github_16">https://github.com/yavski/fab-speed-dial</string>
+    <string name="github_17">https://github.com/wasabeef/Blurry</string>
+    <string name="github_18">https://github.com/jgilfelt/chuck</string>
+    <string name="github_19">https://github.com/Kelin-Hong/ScrollablePanel</string>
+    <string name="github_20">https://github.com/Manabu-GT/ExpandableTextView</string>
+    <string name="github_21">https://github.com/maning0303/MNCalendar</string>
+    <string name="github_22">https://github.com/maning0303/CrashMonitor</string>
+    <string name="github_23">hhttps://github.com/chrisbanes/PhotoView</string>
+
+
+    <string name="gank_update_apk">当前版本是最新版</string>
+
+
+    <string name="current">刚刚</string>
+    <string name="hour_before">%d小时前</string>
+    <string name="minute_before">%d分钟前</string>
+    <string name="second_before">%d秒前</string>
+
+
+    <!--网络相关-->
+    <string name="gank_net_fail">网络出问题啦</string>
+    <string name="gank_get_data_fail">获取数据失败</string>
+    <!--页面标题-->
+    <string name="gank_page_title_feedback">意见反馈</string>
+    <string name="gank_page_title_girls"></string>
+
+    <!--Dialog-->
+    <string name="gank_dialog_title_tishi">提示</string>
+    <string name="gank_dialog_msg_savehint">长按图片即可保存，试试吧！</string>
+    <string name="gank_dialog_confirm">确定</string>
+    <string name="gank_dialog_msg_save_image">是否要将图片保存到手机？</string>
+    <string name="gank_hint_save_pic_fail">图片保存失败</string>
+    <string name="gank_dialog_cancle">取消</string>
+    <string name="gank_hint_exit_app">再按一次退出程序</string>
+    <string name="gank_dialog_title_notify">通知</string>
+    <string name="gank_dialog_msg_feedback">您的反馈有回复了，是否去查看？</string>
+    <string name="gank_hint_copy_success">复制成功</string>
+
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+
+    <!--数据类型：福利 | Android | iOS | 休息视频 | 拓展资源 | 前端-->
+    <string-array name="gankHeadLineTypes">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>休息视频</item>
+        <item>拓展资源</item>
+        <item>前端</item>
+    </string-array>
+
+    <string-array name="msgHeadLineTypes">
+        <item>用户消息</item>
+        <item>设备消息</item>
+        <item>用户报修</item>
+        <item>用户反馈</item>
+    </string-array>
+    <string-array name="noticeHeadLineTypes">
+        <item>未读公告</item>
+        <item>已读公告</item>
+        <item>全部公告</item>
+    </string-array>
+    <string-array name="locHeadLineTypes">
+        <item>全部设备</item>
+        <item>正常设备</item>
+        <item>异常设备</item>
+    </string-array>
+
+    <!--性别：男女 -->
+    <string-array name="sexs">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string name="http_err">网络错误，请重试</string>
+    <string name="feedback_content_you_can_enter">您还可以输入%1$d字</string>
+
+    <string name="common_today">今天</string>
+    <string name="common_yesterday">昨天</string>
+    <string name="common_month">月</string>
+    <string name="common_year">年</string>
+    <string name="common_day">日</string>
+    <string name="common_hour">小时</string>
+    <string name="common_minute">分</string>
+    <string name="common_second">秒</string>
+    <string name="common_monday">星期一</string>
+    <string name="common_tuesday">星期二</string>
+    <string name="common_wednesday">星期三</string>
+    <string name="common_thursday">星期四</string>
+    <string name="common_friday">星期五</string>
+    <string name="common_saturday">星期六</string>
+    <string name="common_sunday">星期日</string>
+    <string name="common_day_before_yesterday">前天</string>
+
+
+    <string name="scan_fail_toast">扫描失败!</string>
+    <string name="scan_parse_error">解析错误，请选择正确的二维码图片</string>
+    <string name="scan_success_title">扫描结果</string>
+    <string name="str_scan_title">扫一扫</string>
+    <string name="str_open_light">开启闪光灯</string>
+    <string name="str_close_light">关闭闪光灯</string>
+    <string name="str_scan_hint">取景框对准二维码, 即可自动扫描</string>
+
+    <string name="dev_alert_title">报警设备</string>
+    <string name="dev_warn_title">故障设备</string>
+    <string name="dev_offline_title">离线设备</string>
+    <string name="dev_online_title">在线设备</string>
+    <string name="dev_all_title">所有设备</string>
+
+    <string name="dev_all_dev_count_title">当前一共有%s台设备</string>
+
+
+    <string name="send_vcode_fail">获取验证码失败，请重试</string>
+    <string name="send_vcode_user_exists">账号已存在，请直接登录</string>
+    <string name="send_vcode_user_not_exists">账号不存在，请先注册</string>
+    <string name="check_vcode_fail">验证码有误，请重新获取</string>
+    <string name="send_vcode_too_many">当日获取短信验证码已超上限</string>
+    <string name="send_vcode_invalid">短信验证码已失效</string>
+
+    <string name="guide_act_jump">跳过</string>
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

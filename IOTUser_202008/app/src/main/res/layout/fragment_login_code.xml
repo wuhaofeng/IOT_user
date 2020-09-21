@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fragment"
+            type="com.iot.user.ui.fragment.login.LoginCodeFragment" />
+    </data>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="118dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/icon_login_user"
+            />
+
+        <EditText
+            android:id="@+id/et_user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:textColor="@color/black_text2_color"
+            android:textColorHint="@color/primary_grey_color"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="44dp"
+            android:id="@+id/btn_click_code_send"
+            android:text="获取验证码"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_rect_blue_btn_fill"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_click_code_send"
+            android:background="@drawable/login_bg"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/icon_login_pw" />
+            <EditText
+                android:id="@+id/et_unit_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="textPassword"
+                android:textColor="@color/black_text2_color"
+                android:textColorHint="@color/primary_grey_color"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+</layout>

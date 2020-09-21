@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.iot.user.ui.activity.shopping.ShoppingOrderSubmitActivity" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/activity_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+                <include layout="@layout/toolbar"
+                    android:id="@+id/toolbar"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/backgroundGray"
+                    android:padding="10dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/swipe_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/item_rect_shopping_list"
+                        android:scrollbars="vertical" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/activity_bottom_layout"
+                android:layout_alignParentBottom="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="合计:"
+                        android:textSize="18dp"
+                        android:textColor="@color/bar_grey_90"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:id="@+id/tv_bottom_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="¥0.00"
+                        android:textSize="20dp"
+                        android:textColor="@color/google_red"
+                        android:gravity="center|clip_vertical" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_bottom_submit"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="提交订单"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/google_red"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

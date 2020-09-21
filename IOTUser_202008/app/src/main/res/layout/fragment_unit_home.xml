@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fragment"
+            type="com.iot.user.ui.fragment.main.UnitHomeFragment" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="?app_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/unit_bg_home">
+        <LinearLayout
+            android:id="@+id/titlebar_sep"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="0.01dp">
+            <TextView
+                android:id="@+id/tv_popwin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:swipe_style="classic">
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_refresh_header_normal"/>
+        <com.iot.user.ui.view.main.UnitHomeScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/swipe_target"
+            android:background="@color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical">
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/btn_home_add"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/unit_add"
+                        android:layout_centerVertical="true"/>
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/btn_home_scape"
+                        android:layout_toLeftOf="@id/btn_home_add"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/scan_white"
+                        android:layout_centerVertical="true"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:id="@+id/linear_change_family"
+                        android:layout_toLeftOf="@id/btn_home_add"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:id="@+id/tv_home_title"
+                            android:text="明厦科技的家"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true"/>
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_toRightOf="@+id/tv_home_title"
+                            android:layout_marginLeft="6dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/unit_next"/>
+                    </LinearLayout>
+                    <com.iot.user.ui.view.main.MClearEditText
+                        android:id="@+id/et_dev_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bg_rect_btn_white_empty_white"
+                        android:hint="搜索设备"
+                        android:textColorHint="@color/primary_disable_color"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tablayout"
+                    android:layout_below="@+id/titlebar_sep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/unit_main_color"
+                    android:tag="sticky"
+                    tools:tabMode="fixed"
+                    tools:tabSelectedTextColor="@color/google_blue"
+                    tools:tabTextColor="@android:color/black"
+                    tools:tabIndicatorHeight="1dp"
+                    tools:tabIndicatorColor="@color/google_blue"
+                    tools:tabTextAppearance="@style/TabStyle">
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="设备信息" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="报警趋势图" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <com.iot.user.ui.view.main.UnitHomeViewPager
+                    android:id="@+id/tab_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/transparent" />
+
+            </LinearLayout>
+        </com.iot.user.ui.view.main.UnitHomeScrollView>
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_refresh_footer_normal"/>
+
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_unit_home_touch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/transparent">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_unit_home_touch"
+            android:layout_centerVertical="true"
+            android:background="@drawable/unit_home_touch"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/iv_unit_all_alert"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/unit_alert"/>
+    </RelativeLayout>
+</RelativeLayout>
+</layout>

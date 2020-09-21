@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popwindow_content_layout"
+    android:background="@color/translate_black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:id="@+id/tv_pop_timer"
+                android:layout_marginRight="2dp"
+                android:text="支付剩余时间"
+                android:textSize="12dp"
+                android:textColor="@color/gray_b5"
+                android:gravity="center|clip_vertical" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:id="@+id/tv_popwindow_price"
+                android:text="¥968.00"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center|clip_vertical" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/backgroundGray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginRight="2dp"
+                android:text="请选择支付方式"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:gravity="center" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/dialog_linear"
+                android:layout_marginTop="5dp"
+                android:background="@color/backgroundGray"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popwindow_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_linear" />
+            <Button
+                android:id="@+id/btn_popwindow_bottom_pay"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="去 支 付"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/bg_rect_red_btn"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_pop_button_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/shopping_cancel"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

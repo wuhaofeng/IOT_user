@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="60dp"
+    android:id="@+id/rl_unit_detail_addr"
+    android:gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_rect_btn_blue_empty_white"
+        android:id="@+id/tv_unit_detail_addr"
+        android:text="回路1"
+        android:textSize="13dp"
+        android:maxLines="2"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+</RelativeLayout>

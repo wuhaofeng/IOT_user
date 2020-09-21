@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iot.user">
+
+    <uses-sdk tools:overrideLibrary="com.sdsmdg.harjot.materialshadows" />
+    <!-- <uses-sdk tools:overrideLibrary="com.readystatesoftware.chuck"/> -->
+    <!-- 8.0安装需要的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NETWORK_PROVIDER" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.iot.user 要替换上您应用的包名 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <permission
+        android:name="com.iot.user.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem" /> <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.iot.user 要替换上您应用的包名 -->
+    <uses-permission android:name="com.iot.user.permission.PROCESS_PUSH_MSG" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".app.IOTApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/DayTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="icon,label,theme,allowBackup">
+        <activity android:name=".ui.activity.share.UnitDevShareActivity"></activity>
+        <activity android:name=".ui.activity.share.UnitShareActivity" />
+        <activity android:name=".ui.activity.room.UnitRoomDetailActivity" />
+        <activity android:name=".ui.activity.room.UnitRoomAddNextActivity" />
+        <activity android:name=".ui.activity.room.UnitRoomAddActivity" />
+        <activity android:name=".ui.activity.room.UnitRoomListActivity" />
+        <activity android:name=".ui.activity.dev.UnitProductAddActivity" />
+        <activity android:name=".ui.view.zxing.activity.CaptureActivity" />
+        <activity android:name=".ui.activity.dev.UnitDevListActivity" />
+        <activity android:name=".ui.activity.dev.UnitDevBindActivity" />
+        <activity android:name=".ui.activity.location.LocationActivity" />
+        <activity android:name=".ui.activity.dev.UnitDevEditActivity" />
+        <activity android:name=".ui.activity.dev.UnitDevRegisterActivity" />
+        <activity android:name=".ui.activity.share.UnitFamilyShareActivity" />
+        <activity android:name=".ui.activity.dev.UnitDevMemberActivity" />
+        <activity
+            android:name=".ui.activity.dialog.GlobalDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity android:name=".ui.activity.dev.UnitDevChartActivity" />
+        <activity android:name=".ui.activity.dev.DevDetailGasActivity" />
+        <activity android:name=".ui.activity.alert.AlertNewActivity" />
+        <activity android:name=".ui.activity.mine.FeedbackActivity" />
+        <activity android:name=".ui.activity.mine.CommonSettingActivity" />
+        <activity android:name=".ui.activity.mine.AlertSettingActivity" />
+        <activity android:name=".ui.activity.mine.RepairActivity" />
+        <activity android:name=".ui.activity.mine.AboutUsActivity" />
+        <activity android:name=".ui.activity.mine.UpdateNicknameActivity" />
+        <activity android:name=".ui.activity.mine.UpdatePwdActivity" />
+        <activity android:name=".ui.activity.mine.PersonInfoActivity" />
+        <activity android:name=".ui.activity.mine.ShareDeviceActivity" />
+        <activity android:name=".ui.activity.shopping.ShoppingOrderListActivity" />
+        <activity android:name=".ui.activity.shopping.ShoppingOrderDetailActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.shopping.ShoppingOrderSubmitActivity" />
+        <activity android:name=".ui.activity.shopping.ShoppingDeviceListActivity" />
+        <activity android:name=".ui.activity.register.RegisterActivity" />
+        <activity android:name=".ui.activity.login.ForgetPsdActivity" />
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.notification.UnitNotificationDetailActivity" />
+        <activity android:name=".ui.activity.message.UnitMessageDetailActivity" />
+        <activity
+            android:name=".ui.activity.main.UnitMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.welcome.GuidePageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activity.welcome.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.login.ServerConfigActivity" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".base.BaseMvpActivity" />
+
+        <provider
+            android:name=".utils.MyFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver android:name=".ui.receiver.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9ac26a8bbf1af0d33c85f98f8b0e2d5b" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <service
+            android:name=".ui.service.IOTIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- 配置SDK核心服务 -->
+        <!-- process必须指定为":pushservice"，切勿随意更改 -->
+        <service
+            android:name=".ui.service.IOTPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <!--
+接入HMSSDK 需要注册的appid参数。value的值中“100284417”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
+                  格式 android:value="appid=xxxxxx"
+                  Access HMSSDK need to register AppID parameters. Value "100284417" is replaced with the actual application APPID, derived from the Developer affiliate website application.
+                  Format android:value= "appid=xxxxxx"
+        -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100930083" />
+        <!--
+ 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.iot.user 要替换上您应用的包名
+            Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
+        -->
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.iot.user.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+        <!--
+ 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.iot.user 要替换上您应用的包名
+            Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
+        -->
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:authorities="com.iot.user.updateSdk.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" /> <!-- <activity android:name=".OpendeviceActivity"/> -->
+        <!-- 使用 HMSAgent 代码接入HMSSDK 需要注册的activity | Use hmsagent code to access HMSSDK activity that requires registration -->
+        <activity
+            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar" />
+        </activity> <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        <!--
+ 接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、透传消息、通知栏点击事件）广播，
+                此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+        com.iot.user 要替换上您应用的包名
+        -->
+        <receiver
+            android:name=".ui.receiver.HuaweiPushReceiver"
+            android:permission="com.iot.user.permission.PROCESS_PUSH_MSG">
+            <intent-filter>
+
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须, 用于接收透传消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 -->
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+                <!-- 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 -->
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                <!-- 可选，查看push通道是否连接，不查看则不需要 -->
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <!--
+如下2个通知会在以后的版本中逐渐废弃
+            接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（点击通知栏或通知栏上的按钮后触发onEvent回调、查看push通道是否连接）广播，
+                此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+        com.iot.user 要替换上您应用的包名
+        -->
+        <!--
+<receiver android:name=".Receiver.HuaweiPushReceiver2">
+            <intent-filter>
+                &lt;!&ndash; 用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt;
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                &lt;!&ndash; 查看push通道是否连接, 不查看则不需要 &ndash;&gt;
+                <action android:name="com.huawei.intent.action.PUSH_STATE"/>
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- 接入HMSSDK PUSH模块需要注册 :接收通道发来的通知栏消息 | The access HMSSDK push module needs to be registered: the notification bar message sent from the receiving channel -->
+        <!--
+ <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver" >
+            <intent-filter>
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- 接入HMSSDK PUSH模块需要注册该service，不需要开发者处理 -->
+        <service
+            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG" />
+                <action android:name="com.huawei.push.msg.PASSBY_MSG" />
+            </intent-filter>
+        </service> <!-- 接入HMSSDK 需要注册的应用下载服务 | Access HMSSDK need to register app download service -->
+        <service
+            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"
+            android:exported="false" />
+
+        <receiver android:name=".ui.receiver.NotificationBroadcastReceiver" />
+    </application>
+
+</manifest>

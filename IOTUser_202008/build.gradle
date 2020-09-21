@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+        appName = "明厦智慧燃气"
+        compileSdkVersion = 30
+        buildToolsVersion = "30.0.1"
+        minSdkVersion = 21
+        targetSdkVersion = 30
+        versionCode = 652
+        versionName = "1.4.9" + new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+8:00"))
+        storePassword = "123456qq"
+        keyAlias = "mingsha"
+        keyPassword = "123456qq"
+}
